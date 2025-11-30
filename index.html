@@ -1,171 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bashir Sadeghi - Personal Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            background: #007bff;
-            padding: 10px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px 15px;
-        }
-        .navbar a:hover {
-            background: #0056b3;
-            border-radius: 5px;
-        }
-        .section {
-            display: none;
-            padding: 20px;
-        }
-        .active {
-            display: block;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .links a, .papers a, .projects a {
-            display: block;
-            margin: 5px 0;
-            text-decoration: none;
-            color: #007bff;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bashir Sadeghi</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <div class="navbar">
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('education_publications')">Education, Publications & Patents</a>
-        <a href="#" onclick="showSection('projects_skills_experience')">Skills & Experience</a>
-    </div>
-
-    <div class="container">
-
-        <!-- Home Section -->
-        <div id="home" class="section active">
-            <h1>Bashir Sadeghi</h1>
-            <p><strong>Location:</strong> East Lansing, MI, USA</p>
-            <p><strong>Email:</strong> <a href="mailto:sadeghib@msu.edu">sadeghib@msu.edu</a></p>
-<!--             <p><strong>Phone:</strong> +1 (517) 940-1631</p> -->
-            
-            <h2>About Me</h2>
-            <p>
-                I am a motivated professional in machine learning, signal processing, deep learning, and computer vision,
-                with extensive experience designing and implementing innovative algorithms in machine learning methodologies,
-                high dimensional data representation learning, inverse problem, optimization, signal/image processing,
-                and graph data analysis.
-            </p>
-            <p>
-                I have contributed to multiple NSF-funded research projects and have authored high-impact journal and conference papers in 
-                TMLR, IEEE TSP, CVPR, ICCV, and ECML.  
-                My work has also led to multiple patents in adversarial machine learning.
-            </p>
-            <p>
-                I am passionate about developing robust/reliable ML models and applying mathematical optimization techniques to improve data fairness, privacy, and efficiency 
-                in machine learning applications.
-            </p>
-
-            <h2>Links</h2>
-            <div class="links">
-                <a href="https://github.com/bashir-sadeghi" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/bashir-sadeghi/" target="_blank">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=3qQ2MYMAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="logo">
+                <span class="logo-mark">B</span>
+                <span class="logo-text">Bashir Sadeghi</span>
             </div>
+            <nav class="nav">
+                <button class="nav-link active" data-section="home">Home</button>
+                <button class="nav-link" data-section="education_publications">
+                    Education & Publications
+                </button>
+                <button class="nav-link" data-section="projects_skills_experience">
+                    Skills & Experience
+                </button>
+            </nav>
         </div>
+    </header>
 
-        <!-- Education, Publications & Patents Section -->
-        <div id="education_publications" class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>PhD in Computer Science and Engineering</strong>, Michigan State University (2023)</li><br><em>Thesis:</em> Invariant Representation Learning via Functions in Reproducing Kernel Hilbert Spaces</li>
-                <li><strong>Master of Science in Electrical and Electronics Engineering</strong>, Eastern Mediterranean University</li>
-                <li><strong>Bachelor of Science in Electrical and Computer Engineering</strong>, Noshirvani University of Technology</li>
-            </ul>
+    <main class="page">
+        <section id="home" class="section section-active">
+            <div class="card hero">
+                <div class="hero-main">
+                    <h1 class="hero-name">Bashir Sadeghi</h1>
+                    <p class="hero-subtitle">
+                        Machine Learning · Signal Processing · Applied AI
+                    </p>
+                    <p class="hero-meta">
+                        <span>East Lansing, MI, USA</span>
+                        <span>·</span>
+                        <a href="mailto:sadeghib@msu.edu">sadeghib@msu.edu</a>
+                    </p>
+                    <p class="hero-about">
+                        I am a Machine Learning Scientist and Applied AI Engineer with a strong background in
+                        signal processing, optimization, and deep learning. My work spans theory and practice:
+                        from developing new ML algorithms and publishing in venues such as TMLR, IEEE TSP,
+                        CVPR, ICCV, and ECML, to building software systems for scientific data analysis.
+                    </p>
+                    <p class="hero-about">
+                        I enjoy designing end-to-end AI solutions — data pipelines, models, APIs, and
+                        user-facing tools — especially for high-dimensional and scientific data. Currently,
+                        I work on machine-learning-assisted radiation detector pulse analysis at FRIB,
+                        including peak fitting, classification, and integration of ML into DAQ workflows.
+                    </p>
 
-            <h2>Journal Publications</h2>
-            <ul class="papers">
-                <li><a href="https://openreview.net/forum?id=3gfpBR1ncr&referrer" target="_blank">On Characterizing the Trade-off in Invariant Representation Learning, TMLR 2022</a></li>
-                <li><a href="https://ieeexplore.ieee.org/abstract/document/8747367" target="_blank">Constrained Sampling: Optimum Reconstruction in Subspace with Minimax Regret Constraint, IEEE TSP 2019</a></li>
-                <li><a href="https://ieeexplore.ieee.org/abstract/document/8055633" target="_blank">Shifting Interpolation Kernel Toward Orthogonal Projection, IEEE TSP 2018</a></li>
-                <li><a href="https://ieeexplore.ieee.org/abstract/document/7332799" target="_blank">Shift-variance and Nonstationarity of Linear Periodically Shift-Variant Systems and Applications to Generalized Sampling Processe, IEEE TSP 2016</a></li>
-            </ul>
+                    <div class="hero-links">
+                        <a href="https://github.com/bashir-sadeghi" target="_blank" class="pill-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/bashir-sadeghi/" target="_blank" class="pill-link">LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=3qQ2MYMAAAAJ&hl=en&oi=ao" target="_blank" class="pill-link">Google Scholar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h2>Conference Publications</h2>
-            <ul class="papers">
-                <li><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Dehdashtian_Utility-Fairness_Trade-Offs_and_How_to_Find_Them_CVPR_2024_paper.pdf" target="_blank">Utility-Fairness Trade-Offs and How to Find Them, CVPR 2024</a></li>
-                <li><a href="https://www.springerprofessional.de/en/adversarial-representation-learning-with-closed-form-solvers/19648550" target="_blank">Adversarial Representation Learning With Closed-Form Solvers, ECML-PKDD 2021</a></li>
-                <li><a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w1/Sadeghi_Imparting_Fairness_to_Pre-Trained_Biased_Representations_CVPRW_2020_paper.pdf" target="_blank">Imparting Fairness to Pre-Trained Biased Representation, CVPRW 2020</a></li>
-                <li><a href="https://hal.cse.msu.edu/papers/kernel-adversarial-representation-learning/" target="_blank">On the Global Optima of Kernelized Adversarial Representation Learning, ICCV 2019</a></li>
-                <li><a href="https://www.eurasip.org/Proceedings/Ext/SampTA2013/papers/p420-sadeghi.pdf" target="_blank">Shift-Variance and Cyclostationarity of Linear Periodically Shift-Variant
-Systems, SampTA 2013</a></li>
-            </ul>
+        <section id="education_publications" class="section">
+            <div class="card">
+                <h2>Education</h2>
+                <ul class="list">
+                    <li>
+                        <strong>PhD in Computer Science and Engineering</strong>, Michigan State University (2023)  
+                        <span class="muted">Thesis: Invariant Representation Learning via Functions in Reproducing Kernel Hilbert Spaces</span>
+                    </li>
+                    <li>
+                        <strong>Master of Science in Electrical and Electronics Engineering</strong>, Eastern Mediterranean University
+                    </li>
+                    <li>
+                        <strong>Bachelor of Science in Electrical and Computer Engineering</strong>, Noshirvani University of Technology
+                    </li>
+                </ul>
+            </div>
 
-            <h2>Patents</h2>
-            <ul>
-                <li><a href="https://patents.google.com/patent/US20240086497A1/en" target="_blank">
-                    Method and system for optimizing a pair of affine classifiers based on a diversity metric </a></li>
-                <li><a href="https://www.freepatentsonline.com/y2022/0398502.html" target="_blank">
-                    Method and System for Creating an Ensemble of Machine Learning Models to Defend Against Adversarial Examples</a></li>
-                <li><a href="https://www.freepatentsonline.com/y2023/0047478.html" target="_blank">
-                    Method and System for Learning an Ensemble of Neural Network Kernel Classifiers Based on Partitions of the Training Data</a></li>
-            </ul>
-        </div>
+            <div class="card">
+                <h2>Journal Publications</h2>
+                <ul class="list list-links">
+                    <li>
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168900225007739" target="_blank">
+                            A machine learning framework for accurate and robust analysis of radiation detector pulses, NIMA 2025
+                        </a>
+                    </li>
 
-        <!-- Projects, Skills & Experience Section -->
-        <div id="projects_skills_experience" class="section">
+                    <li>
+                        <a href="https://openreview.net/forum?id=3gfpBR1ncr&referrer" target="_blank">
+                            On Characterizing the Trade-off in Invariant Representation Learning, TMLR 2022
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8747367" target="_blank">
+                            Constrained Sampling: Optimum Reconstruction in Subspace with Minimax Regret Constraint, IEEE TSP 2019
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8055633" target="_blank">
+                            Shifting Interpolation Kernel Toward Orthogonal Projection, IEEE TSP 2018
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7332799" target="_blank">
+                            Shift-variance and Nonstationarity of Linear Periodically Shift-Variant Systems and Applications to Generalized Sampling Processes, IEEE TSP 2016
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming: Python, C/C++, MATLAB</li>
-                <li>Machine Learning: TensorFlow, PyTorch, LibTorch</li>
-                <li>Databases: MySQL, Microsoft SQL Server</li>
-            </ul>
+            <div class="card">
+                <h2>Conference Publications</h2>
+                <ul class="list list-links">
+                    <li>
+                        <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Dehdashtian_Utility-Fairness_Trade-Offs_and_How_to_Find_Them_CVPR_2024_paper.pdf" target="_blank">
+                            Utility-Fairness Trade-Offs and How to Find Them, CVPR 2024
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.springerprofessional.de/en/adversarial-representation-learning-with-closed-form-solvers/19648550" target="_blank">
+                            Adversarial Representation Learning With Closed-Form Solvers, ECML-PKDD 2021
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w1/Sadeghi_Imparting_Fairness_to_Pre-Trained_Biased_Representations_CVPRW_2020_paper.pdf" target="_blank">
+                            Imparting Fairness to Pre-Trained Biased Representation, CVPRW 2020
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hal.cse.msu.edu/papers/kernel-adversarial-representation-learning/" target="_blank">
+                            On the Global Optima of Kernelized Adversarial Representation Learning, ICCV 2019
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.eurasip.org/Proceedings/Ext/SampTA2013/papers/p420-sadeghi.pdf" target="_blank">
+                            Shift-Variance and Cyclostationarity of Linear Periodically Shift-Variant Systems, SampTA 2013
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Research Associate</strong> at Michigan State University (2023 - Present)</li>
-                <li><strong>Research Assistant</strong> at Michigan State University (2017 - 2023)</li>
-                <li><strong>Research Intern</strong> at Palo Alto Research Center (2020)</li>
-                <li><strong>Teaching Assistant</strong> at Michigan State University (2017 - 2021)</li>
-            </ul>
-        </div>
+            <div class="card">
+                <h2>Patents</h2>
+                <ul class="list list-links">
+                    <li>
+                        <a href="https://patents.google.com/patent/US20240086497A1/en" target="_blank">
+                            Method and System for Optimizing a Pair of Affine Classifiers Based on a Diversity Metric
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.freepatentsonline.com/y2022/0398502.html" target="_blank">
+                            Method and System for Creating an Ensemble of Machine Learning Models to Defend Against Adversarial Examples
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.freepatentsonline.com/y2023/0047478.html" target="_blank">
+                            Method and System for Learning an Ensemble of Neural Network Kernel Classifiers Based on Partitions of the Training Data
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    </div>
+        <section id="projects_skills_experience" class="section">
+            <div class="card">
+                <h2>Projects</h2>
+                <ul class="list">
 
-    <script>
-        function showSection(sectionId) {
-            let sections = document.getElementsByClassName("section");
-            for (let i = 0; i < sections.length; i++) {
-                sections[i].classList.remove("active");
-            }
-            document.getElementById(sectionId).classList.add("active");
-        }
-    </script>
+                    <li>
+                        <strong>ML-Based Alpha Spectroscopy Fitting (FRIB)</strong><br />
+                        Designed an end-to-end AI system for radiation detector pulse analysis, including data
+                        preprocessing pipelines, ML-based peak fitting, classification, and uncertainty
+                        estimation. Integrated Python/PyTorch models with existing C++-based spectroscopy tools
+                        and DAQ workflows. Focused on reliability, robustness, and monitoring of model behavior
+                        under real laboratory conditions.
+                    </li>
 
+                    <li>
+                        <strong>AI Video/Audio Assistant (LLM-Integrated App)</strong> (in progress)<br />
+                        Developing a lightweight web application that uses LLM and speech APIs (OpenAI / Whisper)
+                        to provide transcription, summarization, and auto-caption generation for uploaded videos.
+                        Backend implemented with FastAPI, integrating external AI model endpoints. Frontend kept
+                        intentionally simple (HTML/CSS/JS) for fast iteration. Emphasis on prompt design, model
+                        behavior monitoring, and responsible use of generative AI.
+                    </li>
+
+                    <li>
+                        <strong>Invariant & Fair Representation Learning Framework</strong><br />
+                        Built research codebases implementing invariant representation learning, adversarially
+                        robust features, and model bias analysis. Developed reusable Python modules for training,
+                        evaluation, and visualization of fairness/utility trade-offs. Work resulted in publications
+                        at TMLR, CVPR, ICCV, and ECML, and aligns with responsible AI practices (bias assessment,
+                        privacy, stability).
+                    </li>
+
+                    <li>
+                        <strong>Generalized Sampling & Reconstruction Tools</strong><br />
+                        Implemented signal reconstruction algorithms and kernel-based methods for periodically
+                        shift-variant systems, with reproducible experiment pipelines and companion software for
+                        published TSP and SampTA papers.
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+            <div class="card">
+                <h2>Skills</h2>
+                <ul class="list">
+                    <li><strong>Programming:</strong> Python, C/C++, MATLAB</li>
+                    <li><strong>AI/ML:</strong> PyTorch, TensorFlow, LibTorch, NumPy, SciPy, Scikit-Learn</li>
+                    <li><strong>Data:</strong> SQL, Pandas, data cleaning and visualization</li>
+                    <li><strong>Software & Tools:</strong> Git, Linux, shell scripting, VS Code, Jupyter</li>
+                    <li><strong>Web (basic):</strong> HTML; REST APIs with FastAPI</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+                <h2>Work Experience</h2>
+                    <ul class="list">
+                        <li>
+                            <strong>Research Associate</strong>, Michigan State University (2023 – Present)
+                            <span class="muted">
+                                Building ML-assisted DAQ tools at FRIB, including Python/C++ pipelines for pulse
+                                processing, model training codebases, and integrations with existing spectroscopy
+                                and analysis software.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Research Assistant</strong>, Michigan State University (2017 – 2023)
+                            <span class="muted">
+                                Developed ML frameworks for invariant and fair representation learning. Designed
+                                and implemented research code, data pipelines, and experiments that led to
+                                multiple publications and an NSF-funded project.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Research Intern</strong>, Palo Alto Research Center (2020)
+                            <span class="muted">
+                                Prototyped adversarial ML methods using TensorFlow, evaluated them on real data,
+                                and contributed to three patents on robust model ensembles.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Teaching Assistant</strong>, Michigan State University (2017 – 2021)
+                            <span class="muted">
+                                Supported courses in programming, machine learning, computer networks,
+                                computer architecture, and deep learning.
+                            </span>
+                        </li>
+                    </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Bashir Sadeghi</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
