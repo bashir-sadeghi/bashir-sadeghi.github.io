@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bashir Sadeghi - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #007bff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .links a, .papers a, .projects a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('education_publications')">Education, Publications & Patents</a>
+        <a href="#" onclick="showSection('projects_skills_experience')">Projects, Skills & Experience</a>
+    </div>
+
+    <div class="container">
+
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <h1>Bashir Sadeghi</h1>
+            <p><strong>Location:</strong> Haslett, MI, USA</p>
+            <p><strong>Email:</strong> <a href="mailto:sadeghib@msu.edu">sadeghib@msu.edu</a></p>
+            <p><strong>Phone:</strong> +1 (517) 940-1631</p>
+            
+            <h2>About Me</h2>
+            <p>
+                I am a machine learning researcher specializing in deep learning, optimization, and signal processing. 
+                My research focuses on fair and invariant representation learning, adversarial robustness, and high-dimensional data processing.
+            </p>
+            <p>
+                I have contributed to multiple NSF-funded research projects and have authored high-impact journal and conference papers in 
+                TMLR, IEEE TSP, CVPR, ICCV, ECML-PKDD, and SampTA.  
+                My work has also led to multiple patents in adversarial machine learning.
+            </p>
+            <p>
+                I am passionate about developing robust/reliable ML models and applying mathematical optimization techniques to improve data fairness, privacy, and efficiency 
+                in machine learning applications.
+            </p>
+
+            <h2>Links</h2>
+            <div class="links">
+                <a href="https://github.com/bashir-sadeghi" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/bashir-sadeghi/" target="_blank">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=3qQ2MYMAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+            </div>
+        </div>
+
+        <!-- Education, Publications & Patents Section -->
+        <div id="education_publications" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in Computer Science and Engineering</strong>, Michigan State University (2023)</li>
+                <li><strong>Master of Science in Electrical and Electronics Engineering</strong>, Eastern Mediterranean University</li>
+                <li><strong>Bachelor of Science in Electrical and Computer Engineering</strong>, Noshirvani University of Technology</li>
+            </ul>
+
+            <h2>Journal Publications</h2>
+            <ul class="papers">
+                <li><a href="#" target="_blank">On Characterizing the Trade-off in Invariant Representation Learning, TMLR 2022</a></li>
+                <li><a href="#" target="_blank">Constrained Sampling: Optimum Reconstruction in Subspace with Minimax Regret Constraint, IEEE TSP 2019</a></li>
+                <li><a href="#" target="_blank">Shifting Interpolation Kernel Toward Orthogonal Projection, IEEE TSP 2018</a></li>
+                <li><a href="#" target="_blank">Shift-variance and Nonstationarity of Linear Periodically Shift-Variant Systems and Applications to Generalized Sampling Processe, IEEE TSP 2016</a></li>
+            </ul>
+
+            <h2>Conference Publications</h2>
+            <ul class="papers">
+                <li><a href="#" target="_blank">Utility-Fairness Trade-Offs and How to Find Them, CVPR 2024</a></li>
+                <li><a href="#" target="_blank">Adversarial Representation Learning With Closed-Form Solvers, ECML-PKDD 2021</a></li>
+                <li><a href="#" target="_blank">Imparting Fairness to Pre-Trained Biased Representation, CVPRW 2020</a></li>
+                <li><a href="#" target="_blank">On the Global Optima of Kernelized Adversarial Representation Learning, ICCV 2019</a></li>
+            </ul>
+
+            <h2>Patents</h2>
+            <ul>
+                <li><a href="#" target="_blank">Adversarial Machine Learning with Ensembles</a></li>
+                <li><a href="#" target="_blank">Learning Ensemble Neural Network Kernel Classifiers</a></li>
+            </ul>
+        </div>
+
+        <!-- Projects, Skills & Experience Section -->
+        <div id="projects_skills_experience" class="section">
+            <h2>Projects</h2>
+            <ul class="projects">
+                <li><a href="#" target="_blank">Kernel-Adversarial Representation Learning</a></li>
+                <li><a href="#" target="_blank">Closed-Form Adversarial Representation Learning</a></li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, C/C++, MATLAB</li>
+                <li>Machine Learning: TensorFlow, PyTorch, LibTorch</li>
+                <li>Databases: MySQL, Microsoft SQL Server</li>
+            </ul>
+
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Research Associate</strong> at Michigan State University (2023 - Present)</li>
+                <li><strong>Research Assistant</strong> at Michigan State University (2017 - 2023)</li>
+                <li><strong>Research Intern</strong> at Palo Alto Research Center (2020)</li>
+                <li><strong>Teaching Assistant</strong> at Michigan State University (2017 - 2021)</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.getElementsByClassName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
