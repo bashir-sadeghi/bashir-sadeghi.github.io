@@ -49,20 +49,20 @@
                         deep learning, optimization, and signal processing. My work spans theory and practice:
                         from developing new ML algorithms and publishing in venues such as TMLR, IEEE TSP,
                         CVPR, ICCV, and ECML, to building software systems for scientific data analysis. -->
-                        I am a motivated professional in machine learning (ML) science and artificial intelligence (AI)
-                        engineering with a strong background in deep learning, signal processing, and computer vision.
-                        My experience spans theory and applications, from designing and implementing innovative ML algorithms
-                        to building software solutions for scientific data analysis.
-                        I have contributed to multiple NSF-funded research projects and have authored high-impact
-                        journal and conference papers in CVPR, ICCV, TMLR, IEEE TSP, NIMA, and ECML. My work has also led
-                        to multiple patents in the field of adversarial machine learning.
+                        I am a motivated professional in machine learning (ML) and artificial intelligence (AI) engineering
+                        with a strong background in deep learning, signal processing, and computer vision.
+                        My experience spans both theory and applications, from designing and implementing innovative ML
+                        algorithms to building software solutions for scientific data analysis.
+                        I have contributed to NSF-funded research projects and authored high-impact journal and
+                        conference papers in venues such as CVPR, ICCV, TMLR, IEEE TSP, NIMA, and ECML.
+                        My work has also led to multiple patents in the field of adversarial machine learning.
                     </p>
                     <p class="hero-about">
                         I enjoy designing end-to-end AI solutions, including data collection and cleaning,
-                        predictive model design, APIs, and user interface tools, especially for high-dimensional
-                        and scientific data. Currently, I work on machine-learning-assisted radiation detector pulse analysis
-                        at the Facility for Rare Isotope Beams (FRIB), including peak fitting, classification,
-                        and integration of ML into Data Acquisition (DAQ) workflows at FRIB.
+                        predictive model design, APIs, and user-facing tools, especially for high-dimensional
+                        and scientific data. Currently, I work on machine-learning-assisted radiation detector pulse
+                        analysis at the Facility for Rare Isotope Beams (FRIB), including peak fitting, classification,
+                        and integration of ML into data acquisition (DAQ) workflows.
                     </p>
 
                     <div class="hero-links">
@@ -182,22 +182,51 @@
                 <ul class="list">
 
                     <li>
-                        <strong>ML-Based Alpha Spectroscopy Fitting (FRIB)</strong><br />
-                        Designed an end-to-end AI system for radiation detector pulse analysis, including data
-                        preprocessing pipelines, ML-based peak fitting, classification, and uncertainty
-                        estimation. Integrated Python/PyTorch models with existing C++-based spectroscopy tools
-                        and DAQ workflows. Focused on reliability, robustness, and monitoring of model behavior
-                        under real laboratory conditions.
-                    </li>
-
-                    <li>
-                        <strong>AI Audio/Video Assistant (LLM-Integrated App)</strong> (in progress)<br />
+                        <strong>AI Audio Assistant (LLM-Integrated App)</strong> <br />
                         Developing a lightweight web application that uses LLM and speech APIs (OpenAI / Whisper)
                         to provide transcription and summarization for uploaded audio, with a planned extension to
                         auto-caption generation for video. Backend implemented with FastAPI, integrating external AI model
-                        endpoints. Frontend kept intentionally simple (HTML/CSS/JS) for fast iteration. Emphasis on prompt design,
-                        model behavior monitoring, and responsible use of generative AI.
+                        endpoints. Frontend kept intentionally simple (HTML/CSS/JS) for fast iteration. 
+
+                        <br />
+                        <span class="muted">
+                            Integrates browser file uploads → FastAPI → OpenAI APIs → JSON response rendered in the UI.
+                        </span>
+                        <br />
+                        <a href="https://github.com/bashir-sadeghi/AI-audio-assistant" target="_blank" class="pill-link">
+                            GitHub Repo
+                        </a>
                     </li>
+
+                    <li>
+                        <strong>Neural Language Model on WikiText-2</strong><br />
+                        Educational RNN/LSTM language model built with PyTorch Lightning and a custom BPE tokenizer
+                        trained from GPT-2’s tokenizer, focusing on understanding tokenization, embeddings, and LM training.
+                        <br />
+                        <span class="muted">
+                            Includes data pipeline, training loop, and text generation scripts.
+                        </span>
+                        <br />
+                        <a href="https://github.com/bashir-sadeghi/SLM" target="_blank" class="pill-link">
+                            GitHub Repo
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>SAEFit – ML Framework for Radiation Detector Pulses</strong><br />
+                        Self-supervised framework for pulse reconstruction, parameter estimation, and single/double
+                        pulse classification from real detector traces (NIMA 2025 paper).
+                        <br />
+                        <span class="muted">
+                            PyTorch Lightning codebase with synthetic double-pulse generation, metrics, visualizations,
+                            and integration into existing C++ spectroscopy / DAQ tools at FRIB.
+                        </span>
+                        <br />
+                        <a href="https://github.com/bashir-sadeghi/SAEFIT" target="_blank" class="pill-link">
+                            GitHub Repo
+                        </a>
+                    </li>
+
 
                     <li>
                         <strong>Invariant & Fair Representation Learning Framework</strong><br />
@@ -223,11 +252,11 @@
             <div class="card">
                 <h2>Skills</h2>
                 <ul class="list">
-                    <li><strong>Programming:</strong> Python, C/C++, MATLAB</li>
+                    <li><strong>Programming:</strong> Python, C/C++, MATLAB, JavaScript (basic)</li>
                     <li><strong>AI/ML:</strong> PyTorch, TensorFlow, LibTorch, NumPy, SciPy, Scikit-Learn</li>
                     <li><strong>Data:</strong> SQL, Pandas, data cleaning and visualization</li>
                     <li><strong>Software & Tools:</strong> Git, Linux, shell scripting, VS Code, Jupyter</li>
-                    <li><strong>Web (basic):</strong> HTML; REST APIs with FastAPI</li>
+                    <li><strong>Web:</strong> FastAPI (REST APIs), HTML, basic CSS/JavaScript</li>
                 </ul>
 
             </div>
